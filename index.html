@@ -71,7 +71,7 @@ label {
 <div class="container">
 <h2>Encuesta Minipays</h2>
 
-<form>
+<form action="https://formspree.io/f/mqewrbav
 
 <h3>Datos generales</h3>
 <p>¿Qué edad tienes?</p>
@@ -92,39 +92,39 @@ label {
 <label><input type="radio" name="freq"> Nunca</label>
 
 <p>¿Qué consumes?</p>
-<label><input type="checkbox"> Dulces</label>
-<label><input type="checkbox"> Botanas</label>
-<label><input type="checkbox"> Pan</label>
-<label><input type="checkbox"> Bebidas</label>
+<label><input type="checkbox" name="pref" Dulces</label>
+<label><input type="checkbox" name="pref" Botanas</label>
+<label><input type="checkbox" name="pref" Pan</label>
+<label><input type="checkbox" name="pref" Bebidas</label>
 
 <h3>Preferencias</h3>
 <p>¿Te gustan los minipays?</p>
-<label><input type="radio"> Sí</label>
-<label><input type="radio"> No</label>
-<label><input type="radio"> A veces</label>
+<label><input type="radio" name="gusto" Sí</label>
+<label><input type="radio" name="gusto" No</label>
+<label><input type="radio" name="gusto" A veces</label>
 
 <p>¿Sabor?</p>
-<label><input type="radio"> Fresa</label>
-<label><input type="radio"> Mango</label>
-<label><input type="radio"> Queso</label>
-<label><input type="radio"> Chocolate</label>
+<label><input type="radio" name="sabor" Fresa</label>
+<label><input type="radio" name="sabor" Mango</label>
+<label><input type="radio" name="sabor" Queso</label>
+<label><input type="radio" name="sabor" Chocolate</label>
     
 <h3>Precio</h3>
-<label><input type="radio"> $15-20</label>
-<label><input type="radio"> $21-25</label>
-<label><input type="radio"> $26-30</label>
-<label><input type="radio"> +$30</label>
+<label><input type="radio" name="precio" $15-20</label>
+<label><input type="radio" name="precio" $21-25</label>
+<label><input type="radio" name="precio" $26-30</label>
+<label><input type="radio" name="precio" +$30</label>
 
 <h3>Opinión</h3>
 <p>¿Comprarías?</p>
-<label><input type="radio"> Sí</label>
-<label><input type="radio"> No</label>
-<label><input type="radio"> Tal vez</label>
+<label><input type="radio" name="comp" value="Si"> Sí</label>
+<label><input type="radio" name="comp" value="No">No</label>
+<label><input type="radio" name="comp" value="Tal vez">Tal vez</label>
 
 <p>¿Qué mejorarías?</p>
-<textarea rows="4" style="width:100%;"></textarea>
+<textarea name="mejoras" rows="4" style="width:100%;"></textarea>
 
-<button type="button" onclick="alert('Respuestas enviadas 🔥')">Enviar</button>
+<button type="submit">Enviar</button>
 
 </form>
 </div>
