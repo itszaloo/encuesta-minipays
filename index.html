@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Encuesta Minipays</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #000, #1a1a1a);
+    color: white;
+}
+
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(20,20,20,0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    color: #ff00ff;
+    font-size: 28px;
+}
+
+h3 {
+    color: #00ffff;
+    border-bottom: 1px solid #444;
+}
+
+p {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    margin-bottom: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+label {
+    display: block;
+    margin-left: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Encuesta Minipays</h2>
+
+<form>
+
+<h3>Datos generales</h3>
+<p>¿Qué edad tienes?</p>
+<label><input type="radio" name="edad"> 12-14</label>
+<label><input type="radio" name="edad"> 15-17</label>
+<label><input type="radio" name="edad"> 18+</label>
+
+<p>¿Eres?</p>
+<label><input type="radio" name="rol"> Estudiante</label>
+<label><input type="radio" name="rol"> Docente</label>
+<label><input type="radio" name="rol"> Otro</label>
+
+<h3>Hábitos</h3>
+<p>¿Frecuencia de compra?</p>
+<label><input type="radio" name="freq"> Diario</label>
+<label><input type="radio" name="freq"> 2-3 semana</label>
+<label><input type="radio" name="freq"> 1 vez</label>
+<label><input type="radio" name="freq"> Nunca</label>
+
+<p>¿Qué consumes?</p>
+<label><input type="checkbox"> Dulces</label>
+<label><input type="checkbox"> Botanas</label>
+<label><input type="checkbox"> Pan</label>
+<label><input type="checkbox"> Bebidas</label>
+
+<h3>Preferencias</h3>
+<p>¿Te gustan las gomitas enchiladas?</p>
+<label><input type="radio"> Sí</label>
+<label><input type="radio"> No</label>
+<label><input type="radio"> A veces</label>
+
+<p>¿Sabor?</p>
+<label><input type="radio"> Dulce</label>
+<label><input type="radio"> Picante</label>
+<label><input type="radio"> Agridulce</label>
+
+<h3>Precio</h3>
+<label><input type="radio"> $10-15</label>
+<label><input type="radio"> $16-20</label>
+<label><input type="radio"> $21-30</label>
+<label><input type="radio"> +$30</label>
+
+<h3>Opinión</h3>
+<p>¿Comprarías?</p>
+<label><input type="radio"> Sí</label>
+<label><input type="radio"> No</label>
+<label><input type="radio"> Tal vez</label>
+
+<p>¿Qué mejorarías?</p>
+<textarea rows="4" style="width:100%;"></textarea>
+
+<button type="button" onclick="alert('Respuestas enviadas 🔥')">Enviar</button>
+
+</form>
+</div>
+
+</body>
+</html>
