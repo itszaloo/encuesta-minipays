@@ -71,63 +71,78 @@ label {
 <div class="container">
 <h2>Encuesta Minipays</h2>
 
-<form action="https://formspree.io/f/mqewrbav
+<form action="https://formspree.io/f/mqewrbav" method="POST">
 
 <h3>Datos generales</h3>
 <p>¿Qué edad tienes?</p>
-<label><input type="radio" name="edad"> 12-14</label>
-<label><input type="radio" name="edad"> 15-17</label>
-<label><input type="radio" name="edad"> 18+</label>
+<label><input type="radio" name="edad" value="12-14"> 12-14</label>
+<label><input type="radio" name="edad" value="15-17"> 15-17</label>
+<label><input type="radio" name="edad" value="18+"> 18+</label>
 
 <p>¿Eres?</p>
-<label><input type="radio" name="rol"> Estudiante</label>
-<label><input type="radio" name="rol"> Docente</label>
-<label><input type="radio" name="rol"> Otro</label>
+<label><input type="radio" name="rol" value="Estudiante"> Estudiante</label>
+<label><input type="radio" name="rol" value="Docente"> Docente</label>
+<label><input type="radio" name="rol" value="Otro"> Otro</label>
 
 <h3>Hábitos</h3>
 <p>¿Frecuencia de compra?</p>
-<label><input type="radio" name="freq"> Diario</label>
-<label><input type="radio" name="freq"> 2-3 semana</label>
-<label><input type="radio" name="freq"> 1 vez</label>
-<label><input type="radio" name="freq"> Nunca</label>
+<label><input type="radio" name="freq" value="Diario"> Diario</label>
+<label><input type="radio" name="freq" value="2-3 semana"> 2-3 semana</label>
+<label><input type="radio" name="freq" value="1 vez"> 1 vez</label>
+<label><input type="radio" name="freq" value="Nunca"> Nunca</label>
 
 <p>¿Qué consumes?</p>
-<label><input type="checkbox" name="pref" Dulces</label>
-<label><input type="checkbox" name="pref" Botanas</label>
-<label><input type="checkbox" name="pref" Pan</label>
-<label><input type="checkbox" name="pref" Bebidas</label>
+<label><input type="checkbox" name="pref" value="Dulces"> Dulces</label>
+<label><input type="checkbox" name="pref" value="Botanas"> Botanas</label>
+<label><input type="checkbox" name="pref" value="Pan"> Pan</label>
+<label><input type="checkbox" name="pref" value="Bebidas"> Bebidas</label>
 
 <h3>Preferencias</h3>
 <p>¿Te gustan los minipays?</p>
-<label><input type="radio" name="gusto" Sí</label>
-<label><input type="radio" name="gusto" No</label>
-<label><input type="radio" name="gusto" A veces</label>
+<label><input type="radio" name="gusto" value="Si"> Sí</label>
+<label><input type="radio" name="gusto" value="No"> No</label>
+<label><input type="radio" name="gusto" value="A veces"> A veces</label>
 
 <p>¿Sabor?</p>
-<label><input type="radio" name="sabor" Fresa</label>
-<label><input type="radio" name="sabor" Mango</label>
-<label><input type="radio" name="sabor" Queso</label>
-<label><input type="radio" name="sabor" Chocolate</label>
-    
+<label><input type="radio" name="sabor" value="Fresa"> Fresa</label>
+<label><input type="radio" name="sabor" value="Mango"> Mango</label>
+<label><input type="radio" name="sabor" value="Queso"> Queso</label>
+<label><input type="radio" name="sabor" value="Chocolate"> Chocolate</label>
+
 <h3>Precio</h3>
-<label><input type="radio" name="precio" $15-20</label>
-<label><input type="radio" name="precio" $21-25</label>
-<label><input type="radio" name="precio" $26-30</label>
-<label><input type="radio" name="precio" +$30</label>
+<label><input type="radio" name="precio" value="15-20"> $15-20</label>
+<label><input type="radio" name="precio" value="21-25"> $21-25</label>
+<label><input type="radio" name="precio" value="26-30"> $26-30</label>
+<label><input type="radio" name="precio" value="30+"> +$30</label>
 
 <h3>Opinión</h3>
 <p>¿Comprarías?</p>
 <label><input type="radio" name="comp" value="Si"> Sí</label>
-<label><input type="radio" name="comp" value="No">No</label>
-<label><input type="radio" name="comp" value="Tal vez">Tal vez</label>
+<label><input type="radio" name="comp" value="No"> No</label>
+<label><input type="radio" name="comp" value="Tal vez"> Tal vez</label>
 
 <p>¿Qué mejorarías?</p>
-<textarea name="mejoras" rows="4" style="width:100%;"></textarea>
+<textarea name="mejoras" rows="4" style="width:100%;" placeholder="Escribe tu opinión aquí..."></textarea>
 
 <button type="submit">Enviar</button>
 
 </form>
 </div>
+
+<!-- SCRIPT PARA DESELECCIONAR -->
+<script>
+document.querySelectorAll('input[type="radio"]').forEach(radio => {
+  radio.addEventListener('click', function() {
+    if (this.wasChecked) {
+      this.checked = false;
+      this.wasChecked = false;
+    } else {
+      document.querySelectorAll(input[name="${this.name}"]).forEach(r => r.wasChecked = false);
+      this.wasChecked = true;
+    }
+  });
+});
+</script>
 
 </body>
 </html>
